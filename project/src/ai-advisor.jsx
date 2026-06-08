@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── AI Advisor side panel ───────────────────────────────────────────────────
 import { Btn, Modal, useToast } from './primitives';
 import { I } from './icons';

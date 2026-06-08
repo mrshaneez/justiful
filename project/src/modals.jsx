@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Modals: New case / booking / target / task / request ────────────────────
 
 import { Btn, Field, Input, Modal, Sel, Tag, Textarea, useToast } from './primitives';

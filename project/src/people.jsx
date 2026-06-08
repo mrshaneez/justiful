@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── People directories — Judges, Lawyers, Parties, Reps, Staff ─────────────
 //
 // All five pages share a generic layout (header → search/filter → split table +

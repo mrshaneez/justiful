@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Statistics page — aggregates everything the app holds ───────────────────
 // Cases, hearings, tasks, requests, targets, documents, and the full directory
 // (judges, lawyers, staff, parties, representatives, sections, access grants).

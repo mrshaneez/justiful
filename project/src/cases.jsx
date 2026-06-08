@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Cases list + detail ─────────────────────────────────────────────────────
 import { Card, Btn, Pill, Avatar, Tag, SectionTitle, Empty, Modal, Divider, LinkedCaseChips, useToast } from './primitives';
 import { I } from './icons';

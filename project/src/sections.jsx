@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Sections — judicial section management ─────────────────────────────────
 
 import { Avatar, Btn, Card, Empty, Field, Input, Modal, Pill, Sel, Tag, Textarea, useToast } from './primitives';

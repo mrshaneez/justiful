@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Statistics page — chart primitives ─────────────────────────────────────
 // Restrained, judicial-register charts: muted earthy inks, mono numerals,
 // no gradients. Built to match the dashboard's visual vocabulary.

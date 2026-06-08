@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Dashboard ───────────────────────────────────────────────────────────────
 import { Card, Pill, Avatar, SectionTitle } from './primitives';
 import { I } from './icons';

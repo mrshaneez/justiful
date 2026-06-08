@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Auth: login, provisioning, session, role-based access ──────────────────
 import { initJudges, initLawyers, initStaff, initParties, initRepresentatives } from './data';
 import { Btn, Input } from './primitives';

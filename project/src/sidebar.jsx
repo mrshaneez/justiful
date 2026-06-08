@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Sidebar nav + topbar ────────────────────────────────────────────────────
 import { I } from './icons';
 import { Avatar } from './primitives';

@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Command palette (global search) ────────────────────────────────────────
 //
 // Searches across cases, people, sections, courtroom bookings, tasks/requests,

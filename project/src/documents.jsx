@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Documents — generate court documents from templates ──────────────────
 // Two surfaces:
 //   • DocumentsPage — list templates, pick a case, generate a doc, view archive.

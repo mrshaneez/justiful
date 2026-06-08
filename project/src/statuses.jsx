@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Status customization — admin Settings → Statuses ─────────────────────
 import { I } from './icons';
 import { Btn, Card, Pill, Modal, Input, Field, useToast } from './primitives';

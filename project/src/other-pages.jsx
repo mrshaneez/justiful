@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Targets, Tasks, Requests pages ──────────────────────────────────────────
 import { Card, Btn, Pill, Avatar, Tag, Empty, LinkedCaseChips, useToast } from './primitives';
 import { I } from './icons';

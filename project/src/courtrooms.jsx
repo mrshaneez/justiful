@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Courtrooms scheduler ────────────────────────────────────────────────────
 import { Card, Btn, Pill, Avatar, SectionTitle, Empty, Divider } from './primitives';
 import { I } from './icons';

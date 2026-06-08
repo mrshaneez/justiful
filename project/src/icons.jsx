@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Minimal line icons (1.5px stroke) ───────────────────────────────────────
 
 const Icon = ({ d, size = 16, stroke = "currentColor", fill = "none", style = {} }) => (

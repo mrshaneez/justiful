@@ -1,3 +1,4 @@
+import React from 'react';
 // ─── Shared primitives: pills, avatars, cards, buttons, inputs, modals ───────
 
 const STATUS_COLORS = {
