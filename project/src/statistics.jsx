@@ -1,6 +1,10 @@
 // ─── Statistics page — aggregates everything the app holds ───────────────────
 // Cases, hearings, tasks, requests, targets, documents, and the full directory
 // (judges, lawyers, staff, parties, representatives, sections, access grants).
+import { STAT_PALETTE, StatTile, ChartCard, BarList, Donut, ColumnChart, ProgressRow } from './stat-charts';
+import { Btn, SectionTitle, Card } from './primitives';
+import { I } from './icons';
+import { fmt, MONTH_NAMES, today } from './data';
 
 // Count occurrences of a key across records → sorted [{label, value}]
 function tally(records, getKey) {
@@ -348,4 +352,4 @@ const statSubhead = {
   letterSpacing: "0.05em", marginBottom: 10, fontWeight: 500,
 };
 
-window.StatisticsPage = StatisticsPage;
+export { StatisticsPage };

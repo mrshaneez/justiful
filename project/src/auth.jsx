@@ -1,4 +1,6 @@
 // ─── Auth: login, provisioning, session, role-based access ──────────────────
+import { initJudges, initLawyers, initStaff, initParties, initRepresentatives } from './data';
+import { Btn, Input } from './primitives';
 //
 // Roles:
 //   admin   — Global Admin (hardcoded credentials)
@@ -43,11 +45,11 @@ function detectRoleFromIdentifier(identifier) {
 
   const matches = (rec) => norm(rec.email) === id || norm(rec.phone) === id;
 
-  for (const r of (window.initJudges || []))          if (matches(r)) return { role: "judge", recordId: r.id, name: r.name };
-  for (const r of (window.initStaff  || []))          if (matches(r)) return { role: "staff", recordId: r.id, name: r.name };
-  for (const r of (window.initLawyers|| []))          if (matches(r)) return { role: "lawyer", recordId: r.id, name: r.name };
-  for (const r of (window.initParties|| []))          if (matches(r)) return { role: "party", recordId: r.id, name: r.name };
-  for (const r of (window.initRepresentatives || [])) if (matches(r)) return { role: "rep", recordId: r.id, name: r.name };
+  for (const r of (initJudges || []))          if (matches(r)) return { role: "judge", recordId: r.id, name: r.name };
+  for (const r of (initStaff  || []))          if (matches(r)) return { role: "staff", recordId: r.id, name: r.name };
+  for (const r of (initLawyers|| []))          if (matches(r)) return { role: "lawyer", recordId: r.id, name: r.name };
+  for (const r of (initParties|| []))          if (matches(r)) return { role: "party", recordId: r.id, name: r.name };
+  for (const r of (initRepresentatives || [])) if (matches(r)) return { role: "rep", recordId: r.id, name: r.name };
   return null;
 }
 
@@ -210,13 +212,13 @@ function visibleCases(session, allCases, judges, staff, sections, accessGrants) 
       c.petitioner?.lawyers?.includes(myName) || c.respondent?.lawyers?.includes(myName));
   }
   if (session.role === "party") {
-    const partyRec = (window.initParties || []).find((p) => p.id === myRecordId);
+    const partyRec = (initParties || []).find((p) => p.id === myRecordId);
     const partyName = partyRec?.name || myName;
     return allCases.filter((c) =>
       c.petitioner?.name === partyName || c.respondent?.name === partyName);
   }
   if (session.role === "rep") {
-    const repRec = (window.initRepresentatives || []).find((r) => r.id === myRecordId);
+    const repRec = (initRepresentatives || []).find((r) => r.id === myRecordId);
     const partyName = repRec?.represents;
     return allCases.filter((c) =>
       c.petitioner?.name === partyName || c.respondent?.name === partyName);
@@ -465,11 +467,4 @@ const ChangePasswordScreen = ({ forced, onDone }) => {
   );
 };
 
-window.AuthProvider = AuthProvider;
-window.AuthCtx = AuthCtx;
-window.useAuth = useAuth;
-window.AuthScreen = AuthScreen;
-window.ChangePasswordScreen = ChangePasswordScreen;
-window.ROLE_LABELS = ROLE_LABELS;
-window.visibleCases = visibleCases;
-window.categoriseJudgeCases = categoriseJudgeCases;
+export { AuthProvider, AuthCtx, useAuth, AuthScreen, ChangePasswordScreen, ROLE_LABELS, visibleCases, categoriseJudgeCases };

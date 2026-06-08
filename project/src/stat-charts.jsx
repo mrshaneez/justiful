@@ -202,4 +202,4 @@ const ProgressRow = ({ label, current, metric, sub }) => {
   );
 };
 
-Object.assign(window, { STAT_PALETTE, StatTile, ChartCard, BarList, Donut, ColumnChart, ProgressRow });
+export { STAT_PALETTE, StatTile, ChartCard, BarList, Donut, ColumnChart, ProgressRow };

@@ -1,4 +1,9 @@
 // ─── Courtrooms scheduler ────────────────────────────────────────────────────
+import { Card, Btn, Pill, Avatar, SectionTitle, Empty, Divider } from './primitives';
+import { I } from './icons';
+import { fmt, today, addDays, timeToMins, COURTS, WEEK_DAYS } from './data';
+import { useAuth } from './auth';
+import { COURT_HUE, navBtnStyle } from './dashboard';
 
 const CourtroomsPage = ({ bookings, setBookings, cases, setModal }) => {
   const [weekStart, setWeekStart] = React.useState(() => {
@@ -206,4 +211,4 @@ const CourtroomsPage = ({ bookings, setBookings, cases, setModal }) => {
   );
 };
 
-window.CourtroomsPage = CourtroomsPage;
+export { CourtroomsPage };

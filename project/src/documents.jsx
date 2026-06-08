@@ -2,6 +2,10 @@
 // Two surfaces:
 //   • DocumentsPage — list templates, pick a case, generate a doc, view archive.
 //   • AccessPage    — admin grants cross-section access to judges/staff.
+import { Modal, Btn, Field, Input, Textarea, Pill, Avatar, Card, SectionTitle, useToast, Empty, Tag, LinkedCaseChips, Divider } from './primitives';
+import { I } from './icons';
+import { useAuth, ROLE_LABELS } from './auth';
+import { fmt, today, initTemplates, casePetitioner, caseRespondent, caseAllLawyers, caseAllParties, caseAllReps, t, DV_STRINGS } from './data';
 
 // ── Token resolver: fills {{tokens}} from a case + ambient values ───────────
 function resolveTokens(template, caseData) {
@@ -1564,11 +1568,4 @@ const UploadDocPage = React.forwardRef(({ html, onChange, lang, fontSize,
   );
 });
 
-window.DocumentsPage = DocumentsPage;
-window.GenerateDocModal = GenerateDocModal;
-window.PickTemplateModal = PickTemplateModal;
-window.ViewDocModal = ViewDocModal;
-window.AccessPage = AccessPage;
-window.NewAccessGrantModal = NewAccessGrantModal;
-window.UploadTemplateModal = UploadTemplateModal;
-window.resolveTokens = resolveTokens;
+export { DocumentsPage, GenerateDocModal, PickTemplateModal, ViewDocModal, AccessPage, NewAccessGrantModal, UploadTemplateModal, resolveTokens };

@@ -380,9 +380,9 @@ const LinkedCaseChips = ({ ids = [], cases = [], goCase, size = "sm" }) => {
   );
 };
 
-Object.assign(window, {
+export {
   STATUS_COLORS, STATUS_OVERRIDES, setStatusOverrides, useStatusOverrides,
   Pill, Tag, Avatar, Card, Btn, Field, LinkedCaseChips,
   Input, Sel, Textarea, Modal, SectionTitle, Empty, Divider,
   ToastProvider, useToast,
-});
+};

@@ -1,4 +1,8 @@
 // ─── AI Advisor side panel ───────────────────────────────────────────────────
+import { Btn, Modal, useToast } from './primitives';
+import { I } from './icons';
+import { useAuth } from './auth';
+import { fmt, today } from './data';
 
 const ROLE_INTRO = {
   admin: "I'm your registry advisor. I can summarise the docket, flag SLA risks, suggest scheduling, or draft directions and notices.",
@@ -551,4 +555,4 @@ const advisorMiniBtn = {
   padding: 3, display: "flex", alignItems: "center", flexShrink: 0,
 };
 
-window.AIAdvisor = AIAdvisor;
+export { AIAdvisor };

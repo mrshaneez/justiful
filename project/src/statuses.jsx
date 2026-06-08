@@ -1,4 +1,6 @@
 // ─── Status customization — admin Settings → Statuses ─────────────────────
+import { I } from './icons';
+import { Btn, Card, Pill, Modal, Input, Field, useToast } from './primitives';
 // Five status sets, editable name + colour. Writes flow through
 // setStatusOverrides() so every Pill across the app updates live.
 
@@ -301,10 +303,4 @@ function flattenStatusSets(sets) {
   return out;
 }
 
-window.StatusesPage = StatusesPage;
-window.StatusEditModal = StatusEditModal;
-window.buildInitialStatusSets = buildInitialStatusSets;
-window.flattenStatusSets = flattenStatusSets;
-window.DEFAULT_STATUS_SETS = DEFAULT_STATUS_SETS;
-window.STATUS_SET_LABELS = STATUS_SET_LABELS;
-window.STATUS_PALETTE = STATUS_PALETTE;
+export { StatusesPage, StatusEditModal, buildInitialStatusSets, flattenStatusSets, DEFAULT_STATUS_SETS, STATUS_SET_LABELS, STATUS_PALETTE };

@@ -1,4 +1,8 @@
 // ─── Dashboard ───────────────────────────────────────────────────────────────
+import { Card, Pill, Avatar, SectionTitle } from './primitives';
+import { I } from './icons';
+import { fmt, today, addDays, WEEK_DAYS } from './data';
+import { useAuth, categoriseJudgeCases } from './auth';
 
 const COURT_HUE = {
   "Courtroom 1": { bar: "#1f3a3d", soft: "#e6ebe9" },
@@ -646,5 +650,4 @@ const navBtnStyle = {
   display: "flex", alignItems: "center", justifyContent: "center",
 };
 
-window.DashPage = DashPage;
-window.COURT_HUE = COURT_HUE;
+export { DashPage, COURT_HUE, navBtnStyle };

@@ -1,4 +1,9 @@
 // ─── Cases list + detail ─────────────────────────────────────────────────────
+import { Card, Btn, Pill, Avatar, Tag, SectionTitle, Empty, Modal, Divider, LinkedCaseChips, useToast } from './primitives';
+import { I } from './icons';
+import { fmt, today, casePetitioner, caseRespondent, caseAllLawyers, caseAllParties, caseAllReps } from './data';
+import { useAuth } from './auth';
+import { navBtnStyle } from './dashboard';
 
 const CasesPage = ({ cases, setCases, viewCase, setViewCase, updateCase, setModal }) => {
   const [search, setSearch] = React.useState("");
@@ -547,4 +552,4 @@ const CaseRequests = ({ cs }) => (
   </Card>
 );
 
-window.CasesPage = CasesPage;
+export { CasesPage };

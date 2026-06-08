@@ -1,5 +1,9 @@
 // ─── Modals: New case / booking / target / task / request ────────────────────
 
+import { Btn, Field, Input, Modal, Sel, Tag, Textarea, useToast } from './primitives';
+import { I } from './icons';
+import { fmt, today, addDays, COURTS, TIME_SLOTS, detectClashes } from './data';
+
 // Free-text field with suggestions (datalist) — lets users add any value
 const Combo = ({ label, hint, value, onChange, options = [], placeholder, listId }) => {
   const autoId = React.useId ? React.useId().replace(/:/g, "") : `combo-${Math.random().toString(36).slice(2)}`;
@@ -704,4 +708,4 @@ const EditCaseModal = ({ caseData, cases, setCases, judges, lawyers, parties, re
   );
 };
 
-Object.assign(window, { NewCaseModal, NewTargetModal, EditTargetModal, BookingModal, NewTaskModal, NewRequestModal, EditCaseModal, targetAssignees, CasePicker });
+export { NewCaseModal, EditCaseModal, NewTargetModal, EditTargetModal, BookingModal, NewTaskModal, NewRequestModal, CasePicker, targetAssignees };

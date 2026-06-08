@@ -1,4 +1,7 @@
 // ─── Sidebar nav + topbar ────────────────────────────────────────────────────
+import { I } from './icons';
+import { Avatar } from './primitives';
+import { useAuth, ROLE_LABELS } from './auth';
 
 // Each item has a `roles` array — controls who sees it.
 const NAV_GROUPS = [
@@ -251,7 +254,4 @@ const Topbar = ({ page, viewCase, breadcrumbActions }) => {
   );
 };
 
-window.Sidebar = Sidebar;
-window.Topbar = Topbar;
-window.NAV_ITEMS = NAV_ITEMS;
-window.navForRole = navForRole;
+export { Sidebar, Topbar, NAV_ITEMS, navForRole };

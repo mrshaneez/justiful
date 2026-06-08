@@ -1,4 +1,23 @@
 // ─── App root ────────────────────────────────────────────────────────────────
+import React from 'react';
+import { useTweaks, TweaksPanel, TweakSection, TweakSlider, TweakToggle, TweakRadio } from '../tweaks-panel.jsx';
+import { initCases, initTargets, initBookings, initJudges, initLawyers, initParties, initRepresentatives, initStaff, initSections, initAccessGrants, initTemplates } from './data';
+import { setStatusOverrides, Btn, ToastProvider } from './primitives';
+import { I } from './icons';
+import { useAuth, AuthProvider, AuthScreen, ChangePasswordScreen, visibleCases } from './auth';
+import { Sidebar, Topbar } from './sidebar';
+import { DashPage } from './dashboard';
+import { CasesPage } from './cases';
+import { CourtroomsPage } from './courtrooms';
+import { TargetsPage, TasksPage, RequestsPage } from './other-pages';
+import { SectionsPage, SectionEditModal, SectionAssignModal } from './sections';
+import { DocumentsPage, GenerateDocModal, PickTemplateModal, ViewDocModal, AccessPage, NewAccessGrantModal, UploadTemplateModal } from './documents';
+import { StatisticsPage } from './statistics';
+import { PeoplePage, PersonEditModal, PEOPLE_ROLES } from './people';
+import { CommandPalette } from './command-palette';
+import { NewCaseModal, EditCaseModal, NewTargetModal, EditTargetModal, BookingModal, NewTaskModal, NewRequestModal } from './modals';
+import { AIAdvisor } from './ai-advisor';
+import { StatusesPage, buildInitialStatusSets, flattenStatusSets } from './statuses';
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "density": "comfortable",
@@ -220,4 +239,4 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+export { App };

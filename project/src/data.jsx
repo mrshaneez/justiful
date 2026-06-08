@@ -899,7 +899,7 @@ const initAccessGrants = [
     grantedBy: "Global Admin", grantedAt: "2024-04-15", reason: "Acting registrar coverage" },
 ];
 
-Object.assign(window, {
+export {
   JUDGES, LAWYERS, COURTS, TIME_SLOTS, WEEK_DAYS, MONTH_NAMES,
   today, fmt, addDays, timeToMins, minsToTime, timesOverlap,
   initCases, initTargets, initBookings, detectClashes,
@@ -907,4 +907,4 @@ Object.assign(window, {
   initSections, initTemplates, initAccessGrants,
   DV_STRINGS, t,
   casePetitioner, caseRespondent, caseAllLawyers, caseAllParties, caseAllReps,
-});
+};

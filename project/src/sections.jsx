@@ -1,5 +1,9 @@
 // ─── Sections — judicial section management ─────────────────────────────────
 
+import { Avatar, Btn, Card, Empty, Field, Input, Modal, Pill, Sel, Tag, Textarea, useToast } from './primitives';
+import { I } from './icons';
+import { useAuth } from './auth';
+
 const SectionsPage = ({ sections, setSections, judges, staff, cases, setModal }) => {
   const { session } = useAuth();
   const isAdmin = session?.role === "admin";
@@ -371,6 +375,4 @@ const SectionAssignModal = ({ section, kind, sections, setSections, judges, staf
   );
 };
 
-window.SectionsPage = SectionsPage;
-window.SectionEditModal = SectionEditModal;
-window.SectionAssignModal = SectionAssignModal;
+export { SectionsPage, SectionEditModal, SectionAssignModal };

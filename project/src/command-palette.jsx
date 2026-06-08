@@ -3,6 +3,9 @@
 // Searches across cases, people, sections, courtroom bookings, tasks/requests,
 // and pages. Triggered from the sidebar Search button or ⌘K / Ctrl-K.
 
+import { I } from './icons';
+import { NAV_ITEMS } from './sidebar';
+
 const CommandPalette = ({
   open, onClose,
   cases, judges, lawyers, parties, representatives, staff, sections, bookings,
@@ -30,7 +33,7 @@ const CommandPalette = ({
     const allItems = [];
 
     // Pages
-    const pages = (window.NAV_ITEMS || []).filter(i =>
+    const pages = (NAV_ITEMS || []).filter(i =>
       ["dashboard","cases","courtrooms","targets","tasks","requests","sections",
        "judges","staff","lawyers","parties","representatives"].includes(i.id));
     for (const p of pages) {
@@ -302,4 +305,4 @@ const CommandPalette = ({
   );
 };
 
-window.CommandPalette = CommandPalette;
+export { CommandPalette };

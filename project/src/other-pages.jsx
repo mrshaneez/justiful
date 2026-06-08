@@ -1,4 +1,8 @@
 // ─── Targets, Tasks, Requests pages ──────────────────────────────────────────
+import { Card, Btn, Pill, Avatar, Tag, Empty, LinkedCaseChips, useToast } from './primitives';
+import { I } from './icons';
+import { useAuth } from './auth';
+import { targetAssignees } from './modals';
 
 const TargetsPage = ({ targets, setTargets, cases = [], goCase, setModal }) => {
   const { session } = useAuth();
@@ -297,4 +301,4 @@ const RequestsPage = ({ cases, updateCase, setModal }) => {
   );
 };
 
-Object.assign(window, { TargetsPage, TasksPage, RequestsPage });
+export { TargetsPage, TasksPage, RequestsPage };

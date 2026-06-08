@@ -4,6 +4,11 @@
 // detail panel) so the visual register stays consistent. The per-role config
 // declares columns, fields and detail layout — no per-role JSX duplication.
 
+import { Avatar, Btn, Card, Empty, Field, Input, Modal, Pill, Sel, Tag, Textarea, useToast } from './primitives';
+import { I } from './icons';
+import { fmt, today } from './data';
+import { useAuth } from './auth';
+
 // ──────────────────────────────────────────────────────────────────────────────
 // Role configs
 // ──────────────────────────────────────────────────────────────────────────────
@@ -783,6 +788,5 @@ const PersonEditModal = ({ role, record, records, setRecords, onClose }) => {
 // Exports
 // ──────────────────────────────────────────────────────────────────────────────
 
-window.PeoplePage = PeoplePage;
-window.PersonEditModal = PersonEditModal;
-window.PEOPLE_ROLES = ROLES;
+export { PeoplePage, PersonEditModal };
+export { ROLES as PEOPLE_ROLES };
