@@ -2,7 +2,7 @@ import React from 'react';
 // ─── Dashboard ───────────────────────────────────────────────────────────────
 import { Card, Pill, Avatar, SectionTitle } from './primitives';
 import { I } from './icons';
-import { fmt, today, addDays, WEEK_DAYS } from './data';
+import { fmt, today, addDays, WEEK_DAYS, timeToMins } from './data';
 import { useAuth, categoriseJudgeCases } from './auth';
 
 const COURT_HUE = {

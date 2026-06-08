@@ -3,7 +3,7 @@ import React from 'react';
 // Cases, hearings, tasks, requests, targets, documents, and the full directory
 // (judges, lawyers, staff, parties, representatives, sections, access grants).
 import { STAT_PALETTE, StatTile, ChartCard, BarList, Donut, ColumnChart, ProgressRow } from './stat-charts';
-import { Btn, SectionTitle, Card } from './primitives';
+import { Btn, SectionTitle, Card, Pill } from './primitives';
 import { I } from './icons';
 import { fmt, MONTH_NAMES, today } from './data';
 
